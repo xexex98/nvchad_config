@@ -50,6 +50,8 @@ M.general = {
       "toggle vertical term",
     },
   },
+
+  i = {},
 }
 
 -- more keybinds!
