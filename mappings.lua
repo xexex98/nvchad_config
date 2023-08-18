@@ -5,6 +5,11 @@ M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     -- toggle in normal mode
+    ["fq"] = {
+      ":Telescope file_browser <CR>",
+      "File browser",
+      opts = {noremap = true}
+    },
     ["Ω"] = {
       function()
         require("nvterm.terminal").toggle "float"
@@ -49,6 +54,7 @@ M.general = {
       end,
       "toggle vertical term",
     },
+  
   },
 
   i = {},

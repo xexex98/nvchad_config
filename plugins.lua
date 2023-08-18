@@ -49,11 +49,26 @@ local plugins = {
   {
     "kdheepak/lazygit.nvim",
     -- optional for floating window border decoration
-    lazy=false,
+    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
   },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    lazy = false,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").load_extension "file_browser"
+    end
+  },
+    -- {
+  --   "rcarriga/nvim-notify",
+  --   lazy = false,
+  --   dependencies = {
+  --     "rcarriga/nvim-notify",
+  --   },
+  -- },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
