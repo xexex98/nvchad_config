@@ -2,7 +2,6 @@ local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 local plugins = {
-
   -- Override plugin definition options
 
   {
@@ -60,9 +59,25 @@ local plugins = {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
       require("telescope").load_extension "file_browser"
-    end
+    end,
   },
-    -- {
+  {
+    'windwp/nvim-ts-autotag',
+    lazy = false,
+  }
+  -- {
+  --   "nvimdev/lspsaga.nvim",
+  --   cmd = { "Saga" },
+  --   config = function()
+  --     require("lspsaga").setup {}
+  --   end,
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-tree/nvim-web-devicons",
+  --   },
+  --   opts = {},
+  -- },
+  -- {
   --   "rcarriga/nvim-notify",
   --   lazy = false,
   --   dependencies = {
